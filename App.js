@@ -1,5 +1,6 @@
 import { StatusBar, SafeAreaView, View} from 'react-native';
 import Basket from './src/screens/basket';
+import mock from './src/mocks/basket';
 
 import { useFonts, 
         Montserrat_400Regular,
@@ -21,7 +22,7 @@ export default function App() {
   return (
     <SafeAreaView>
       <StatusBar />
-      <Basket />
+      <Basket {...mock}/>
     </SafeAreaView>
   );
 };

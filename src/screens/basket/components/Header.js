@@ -4,11 +4,11 @@ import { Dimensions, Image, StyleSheet } from 'react-native';
 import topo from '../../../../assets/topo.png';
 import TextMontserrat from '../../../components/Text';
 
-export default function Header() {
+export default function Header({title}) {
 
     return <>
         <Image source={topo} style={styles.topo}></Image>
-        <TextMontserrat style={styles.title}>Detalhe da Cesta</TextMontserrat>
+        <TextMontserrat style={styles.title}>{title}</TextMontserrat>
     </>
 }
 

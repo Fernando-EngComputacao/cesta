@@ -1,23 +1,18 @@
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
 
-
 import TextMontserrat from '../../../components/Text';
-import logoFarm from '../../../../assets/logo.png';
 
-export default function Details() {
+export default function Details({name, farmLogo, farmName,description,price}) {
     return <>
         
-        <TextMontserrat style={styles.nameBasket}>Cesta de Verduras</TextMontserrat>
+        <TextMontserrat style={styles.nameBasket}>{name}</TextMontserrat>
             <View style={styles.viewFarmStyle}>
-                <Image source={logoFarm} style={styles.logoFarmStyle} />
-                <TextMontserrat style={styles.farmName}>Furtado's Farm</TextMontserrat>
+                <Image source={farmLogo} style={styles.logoFarmStyle} />
+                <TextMontserrat style={styles.farmName}>{farmName}</TextMontserrat>
             </View>
-            <TextMontserrat style={styles.description}>
-                Uma cesta com produtos selecionados,
-                cuidadosamente da fazenda Furtado's para sua cozinha.
-            </TextMontserrat>
-            <TextMontserrat style={styles.price}>R$ 40.00</TextMontserrat>
+            <TextMontserrat style={styles.description}>{description}</TextMontserrat>
+            <TextMontserrat style={styles.price}>{price}</TextMontserrat>
         
     </>
 }
