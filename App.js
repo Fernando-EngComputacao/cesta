@@ -7,6 +7,7 @@ import { useFonts,
 } from '@expo-google-fonts/montserrat';
 
 
+
 export default function App() {
 
   const [fontesCarregadas] = useFonts({

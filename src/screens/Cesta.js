@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Dimensions, Text, View } from 'react-native';
+import { Image, StyleSheet, Dimensions, View } from 'react-native';
 
 import TextMontserrat from '../components/Text';
 
