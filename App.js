@@ -1,5 +1,5 @@
 import { StatusBar, SafeAreaView, View} from 'react-native';
-import Cesta from './src/screens/Cesta';
+import Basket from './src/screens/basket';
 
 import { useFonts, 
         Montserrat_400Regular,
@@ -21,7 +21,7 @@ export default function App() {
   return (
     <SafeAreaView>
       <StatusBar />
-      <Cesta />
+      <Basket />
     </SafeAreaView>
   );
 };

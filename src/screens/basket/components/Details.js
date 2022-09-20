@@ -1,20 +1,16 @@
 import React from 'react';
-import { Image, StyleSheet, Dimensions, View } from 'react-native';
+import { Image, StyleSheet, View } from 'react-native';
 
-import TextMontserrat from '../components/Text';
 
-import topo from '../../assets/topo.png';
-import logoFarm from '../../assets/logo.png';
-export default function Cesta() {
+import TextMontserrat from '../../../components/Text';
+import logoFarm from '../../../../assets/logo.png';
 
+export default function Details() {
     return <>
-        <Image source={topo} style={styles.topo}></Image>
-        <TextMontserrat style={styles.title}>Detalhe da Cesta</TextMontserrat>
-
-        <View style={styles.basket}>
-            <TextMontserrat style={styles.nameBasket}>Cesta de Verduras</TextMontserrat>
+        
+        <TextMontserrat style={styles.nameBasket}>Cesta de Verduras</TextMontserrat>
             <View style={styles.viewFarmStyle}>
-                <Image source={logoFarm} style={styles.logoFarmStyle}/>
+                <Image source={logoFarm} style={styles.logoFarmStyle} />
                 <TextMontserrat style={styles.farmName}>Furtado's Farm</TextMontserrat>
             </View>
             <TextMontserrat style={styles.description}>
@@ -22,29 +18,11 @@ export default function Cesta() {
                 cuidadosamente da fazenda Furtado's para sua cozinha.
             </TextMontserrat>
             <TextMontserrat style={styles.price}>R$ 40.00</TextMontserrat>
-        </View>
+        
     </>
-
 }
 
-const widthImgScreen = Dimensions.get('screen').width;
-
 const styles = StyleSheet.create({
-    topo: {
-        width: "100%",
-        height: (578 / 768) * widthImgScreen,
-    },
-    title: {
-        width: "100%",
-        position: "absolute",
-        textAlign: "center",
-        lineHeight: 26,
-        fontSize: 16,
-        color: "white",
-        fontWeight: "bold",
-        padding: 16,
-        
-    },
     basket: {
         paddingVertical: 8,
         paddingHorizontal: 16,
@@ -83,4 +61,3 @@ const styles = StyleSheet.create({
     }   
 
 });
-
