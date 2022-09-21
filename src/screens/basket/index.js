@@ -1,21 +1,33 @@
 import React from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
 
 import Header from './components/Header';
 import Details from './components/Details';
-import Itens from './components/Itens';
+import renderItem from './components/Item';
+import { FlatList, StyleSheet, View } from 'react-native';
+import TextMontserrat from '../../components/Text';
 
 
-export default function Basket({header, details, itens}) {
+
+export default function Basket({ header, details, itens }) {
 
 
-    return <ScrollView>
-        <Header {...header} />
-        <View style={styles.basket}>
-            <Details {...details} />
-            <Itens {...itens} />
-        </View>   
-    </ScrollView>
+    return <>
+        <FlatList
+            data={itens.listItens}
+            renderItem={renderItem}
+            keyExtractor={({ name }) => name}
+            ListHeaderComponent={() => {
+                return <>
+                    <Header {...header} />
+                    <View style={styles.basket}>
+                        <Details {...details} />
+                        <TextMontserrat style={ styles.title }> {itens.title} </TextMontserrat>
+                    </View>
+                </>
+
+            }}
+        />
+    </>
 
 }
 
@@ -23,6 +35,14 @@ const styles = StyleSheet.create({
     basket: {
         paddingVertical: 8,
         paddingHorizontal: 16,
+    },
+    title: {
+        color: "#464646",
+        fontWeight: 'bold',
+        marginTop: 32,
+        marginBottom: 8,
+        fontSize: 20,
+        lineHeight: 32,
     },
 });
 

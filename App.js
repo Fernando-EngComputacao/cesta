@@ -1,4 +1,4 @@
-import { StatusBar, SafeAreaView, View} from 'react-native';
+import { StatusBar, SafeAreaView, View, StyleSheet} from 'react-native';
 import Basket from './src/screens/basket';
 import mock from './src/mocks/basket';
 
@@ -21,9 +21,15 @@ export default function App() {
     return <View />
   }
   return (
-    <SafeAreaView>
+    <SafeAreaView style={ styles.safeAreaView }>
       <StatusBar />
       <Basket {...mock}/>
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  safeAreaView: {
+    flex: 1,
+  }
+});
