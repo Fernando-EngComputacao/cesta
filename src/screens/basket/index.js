@@ -1,19 +1,21 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 
 import Header from './components/Header';
 import Details from './components/Details';
+import Itens from './components/Itens';
 
 
-export default function Basket({header, details}) {
+export default function Basket({header, details, itens}) {
 
 
-    return <>
+    return <ScrollView>
         <Header {...header} />
         <View style={styles.basket}>
             <Details {...details} />
+            <Itens {...itens} />
         </View>   
-    </>
+    </ScrollView>
 
 }
 

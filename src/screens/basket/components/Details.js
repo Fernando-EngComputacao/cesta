@@ -13,7 +13,7 @@ export default function Details({ name, farmLogo, farmName, description, price, 
         </View>
         <TextMontserrat style={styles.description}>{description}</TextMontserrat>
         <TextMontserrat style={styles.price}>{price}</TextMontserrat>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => {}}>
             <TextMontserrat style={styles.textButton}>{button}</TextMontserrat>
         </TouchableOpacity>
     </>
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     },
     textButton: {
         textAlign: 'center',
-        color: "#FFFFFFF",
+        color: "#FFFFFF",
         fontSize: 16,
         fontWeight: 'bold',
     }
