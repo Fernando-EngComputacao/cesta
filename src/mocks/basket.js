@@ -12,6 +12,7 @@ const basket = {
         farmName: "Furtado's Farm",
         description: "Uma cesta com produtos selecionados, cuidadosamente da fazenda Furtado's para sua cozinha.",
         price: "R$ 40.00",
+        button: "Comprar",
     }
 }
 

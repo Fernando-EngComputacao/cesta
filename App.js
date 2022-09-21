@@ -6,6 +6,7 @@ import { useFonts,
         Montserrat_400Regular,
         Montserrat_700Bold
 } from '@expo-google-fonts/montserrat';
+//import AppLoading from 'expo-app-loading';
 
 
 
